@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthPro Digital Marketing Agency | Grow Your Business</title>
+    <meta name="description"
+          content="GrowthPro is a professional digital marketing agency providing SEO, social media marketing, PPC advertising, web design and content marketing services.">
+    <meta name="keywords"
+          content="digital marketing, SEO agency, social media marketing, PPC, web design, content marketing">
+    <meta name="author" content="GrowthPro">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GrowthPro Digital Marketing Agency">
+    <meta property="og:description"
+          content="Grow your business with powerful digital marketing strategies.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #172033;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #5b4bff;
+        }
+
+        .logo span {
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #5b4bff;
+        }
+
+        .nav-btn {
+            background: #5b4bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            padding: 90px 0;
+            background: linear-gradient(135deg, #f6f7ff, #ffffff);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #5b4bff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #5b4bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(91,75,255,.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f5ff;
+        }
+
+        .hero-image {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,.12);
+        }
+
+        .hero-image img {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: #fafaff;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: #eeecff;
+            border-radius: 12px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #5b4bff;
+            margin-right: 10px;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            background: #111827;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat h3 {
+            font-size: 38px;
+            color: #a9a2ff;
+        }
+
+        .stat p {
+            color: #cbd5e1;
+        }
+
+        /* ================= PORTFOLIO ================= */
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            overflow: hidden;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            background: white;
+        }
+
+        .portfolio-card img {
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-info p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* ================= TESTIMONIALS ================= */
+
+        .testimonials {
+            background: #fafaff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+        }
+
+        .stars {
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .client {
+            font-weight: 700;
+        }
+
+        /* ================= PRICING ================= */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .price-card {
+            padding: 35px;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .price-card.featured {
+            background: #5b4bff;
+            color: white;
+            transform: scale(1.04);
+        }
+
+        .price {
+            font-size: 40px;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+
+        .price-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .price-list li {
+            margin: 12px 0;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #f7f7ff;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.06);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #5b4bff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer p {
+            color: #9ca3af;
+            margin-top: 12px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 9px 0;
+            color: #9ca3af;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #273244;
+            padding-top: 20px;
+            color: #9ca3af;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links,
+            .nav-btn {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links.active {
+                display: flex;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                gap: 18px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .hero-content,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero-image img {
+                height: 320px;
+            }
+
+            .service-grid,
+            .portfolio-grid,
+            .testimonial-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .price-card.featured {
+                transform: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            Growth<span>Pro</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-btn">Get Started</a>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div>
+            <p style="color:#5b4bff;font-weight:700;">
+                🚀 DIGITAL MARKETING WITH MAAZ YOUSAF 
+            </p>
+
+            <h1>
+                Grow Your Business
+                <span>Online.</span>
+            </h1>
+
+            <p>
+                We help businesses attract more customers, increase
+                sales and build powerful online brands with modern
+                digital marketing strategies.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Start Growing
+                </a>
+
+                <a href="#services" class="btn btn-secondary">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                alt="Digital marketing team working together"
+                loading="eager">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Digital Marketing Services</h2>
+            <p>
+                Everything you need to build your brand and grow
+                your business online.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article class="service-card">
+                <div class="icon">🔍</div>
+                <h3>SEO Optimization</h3>
+                <p>
+                    Improve your Google rankings and attract
+                    high-quality organic traffic.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="icon">📱</div>
+                <h3>Social Media Marketing</h3>
+                <p>
+                    Build your brand and engage your audience
+                    across major social platforms.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="icon">📈</div>
+                <h3>PPC Advertising</h3>
+                <p>
+                    Generate targeted traffic and leads through
+                    effective paid advertising campaigns.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="icon">✍️</div>
+                <h3>Content Marketing</h3>
+                <p>
+                    Create valuable content that attracts,
+                    educates and converts your audience.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="icon">💻</div>
+                <h3>Web Design</h3>
+                <p>
+                    Create fast, responsive and conversion-focused
+                    websites for your business.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <div class="icon">📊</div>
+                <h3>Analytics & Strategy</h3>
+                <p>
+                    Use data and analytics to make smarter
+                    marketing decisions.
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container about-content">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80"
+                alt="Digital marketing strategy meeting"
+                loading="lazy">
+        </div>
+
+        <div class="about-text">
+
+            <p style="color:#5b4bff;font-weight:700;">
+                WHY CHOOSE US
+            </p>
+
+            <h2>
+                Marketing that focuses on real growth.
+            </h2>
+
+            <p>
+                We combine creativity, technology and data to
+                create marketing campaigns that help businesses
+                achieve measurable results.
+            </p>
+
+            <ul class="check-list">
+                <li>Data-driven marketing strategies</li>
+                <li>Experienced marketing specialists</li>
+                <li>Transparent reporting</li>
+                <li>Customized campaigns</li>
+                <li>Focus on measurable results</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <h3>250+</h3>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat">
+            <h3>120+</h3>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat">
+            <h3>5M+</h3>
+            <p>Leads Generated</p>
+        </div>
+
+        <div class="stat">
+            <h3>8+</h3>
+            <p>Years Experience</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Recent Work</h2>
+            <p>
+                Some examples of projects and campaigns we have
+                worked on.
+            </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <article class="portfolio-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                    alt="Business analytics dashboard"
+                    loading="lazy">
+
+                <div class="portfolio-info">
+                    <h3>Business Growth Campaign</h3>
+                    <p>
+                        SEO + PPC + Content Marketing
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="portfolio-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=form
